@@ -102,13 +102,37 @@ Chaque phase ci-dessous fera l'objet d'un plan dédié, proposé et validé avan
 - `Vente` (date, total, statut de paiement)
 - `LigneVente` (produit, quantité, prix unitaire, vente associée)
 
+### 2026-09-18 — PostgreSQL de dev : sur le VPS via Docker, pas en local
+
+**Décision** : Docker n'étant pas installé sur la machine de développement Windows, le PostgreSQL de développement tourne dans un conteneur Docker **sur le VPS Hostinger** (`/opt/kisimax-dev/docker-compose.yml`, service `db`, image `postgres:16-alpine`), lié à `127.0.0.1:5432` uniquement (jamais exposé sur Internet). La connexion depuis la machine Windows se fait via un **tunnel SSH** (`ssh -N -L 5432:127.0.0.1:5432 root@<IP_VPS>`, script `infra/dev/tunnel.ps1`), ce qui permet à `apps/api` de se connecter à `localhost:5432` comme si la base était locale.
+
+**Pourquoi** : évite d'installer Docker Desktop (admin + WSL2) sur la machine de dev tout en gardant Postgres jamais exposé publiquement — le port n'est lié qu'à `localhost` côté VPS, donc inaccessible sans passer par SSH.
+
+**Attention** : ce conteneur de dev (`/opt/kisimax-dev/`) est distinct du futur déploiement de production (`infra/` racine, à définir à l'étape de déploiement). Le VPS de dev et le VPS de prod sont pour l'instant **le même serveur** (`187.124.115.83`, srv1989708) — un point à surveiller une fois en production, pour ne pas mélanger données de test et données réelles.
+
+**Piège rencontré** : `ssh`/`git` fonctionnent en ligne de commande mais nécessitent de rafraîchir `$env:PATH` à chaque nouvelle commande PowerShell (le PATH système/utilisateur n'est pas repris automatiquement par défaut dans les commandes lancées par l'agent).
+
+**Accès VPS** : authentification par clé SSH dédiée générée pour ce projet (`~/.ssh/kisimax_vps` sur la machine Windows), ajoutée manuellement par l'utilisateur dans `authorized_keys` du VPS. Pas d'authentification par mot de passe utilisée.
+
 ## Journal des pièges rencontrés
 
 - **2026-09-18** — Connecteur MCP GitHub indisponible dans cette session (échec d'authentification côté serveur MCP) et `gh` CLI absent de la machine → impossible de créer/gérer un dépôt GitHub par API depuis l'agent ; passage par création manuelle du dépôt sur github.com par l'utilisateur, puis Git en ligne de commande pour le reste.
 - **2026-09-18** — `git` non trouvé au premier essai dans PowerShell alors qu'il est installé : le PATH de la session n'incluait pas le PATH système/utilisateur à jour. Rafraîchir `$env:PATH` depuis les variables d'environnement Machine/User résout le problème dans la session en cours.
 - **2026-09-18** — `git push -u origin main` échoue avec `terminal prompts disabled` : aucun credential helper Git configuré sur la machine, donc pas d'authentification GitHub stockée, et le terminal non-interactif de l'agent ne peut pas gérer de prompt de login. **Action requise côté utilisateur** : lancer `git push -u origin main` une première fois depuis un terminal interactif normal (hors agent) pour s'authentifier (Git Credential Manager ou Personal Access Token) ; les pushs suivants passeront ensuite sans prompt.
 
+## Avancement Phase 1 (MVP mono-boutique)
+
+Plan détaillé validé le 2026-09-18 (schéma Prisma, modules NestJS, écrans React, étapes 1 à 12 — voir historique de conversation / futur `docs/phase-1-plan.md` si besoin de le formaliser).
+
+- [x] Étape 1 — Bootstrap monorepo : `pnpm-workspace.yaml`, `apps/api` (NestJS scaffoldé), `apps/web` (React/Vite scaffoldé), `infra/dev/docker-compose.yml` (Postgres dev sur le VPS), `.env.example` (api + web), tunnel SSH opérationnel, `pnpm install` racine OK.
+- [ ] Étape 2 — Prisma + PostgreSQL : schéma complet, migration, seed admin.
+- [ ] Étape 3 — `ProduitsModule` + `StockModule`.
+- [ ] Étape 4 — `VentesModule`.
+- [ ] Étape 5 — `AuthModule`.
+- [ ] Étape 6 — `DashboardModule`.
+- [ ] Étape 7 à 11 — Frontend (bootstrap, Produits, Caisse, Dashboard, polish).
+- [ ] Étape 12 — Mise à jour finale de `CLAUDE.md` (décisions Redis reporté, pas de numéro de vente séquentiel, etc.).
+
 ## Prochaine étape immédiate
 
-- Initialiser le dépôt Git local (`git init`, remote `origin` vers https://github.com/knftech243/kisimax.git), structure de dossiers minimale (`apps/api`, `apps/web`, `infra/`), `.gitignore`, premier commit.
-- Ensuite : proposer un plan détaillé pour la **Phase 1 (MVP mono-boutique)** avant d'écrire le moindre code applicatif.
+Étape 2 : écrire le schéma Prisma complet (`apps/api/prisma/schema.prisma`), lancer la première migration contre le PostgreSQL de dev (via le tunnel SSH), et créer le script de seed (1 compte admin).
