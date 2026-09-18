@@ -106,6 +106,7 @@ Chaque phase ci-dessous fera l'objet d'un plan dédié, proposé et validé avan
 
 - **2026-09-18** — Connecteur MCP GitHub indisponible dans cette session (échec d'authentification côté serveur MCP) et `gh` CLI absent de la machine → impossible de créer/gérer un dépôt GitHub par API depuis l'agent ; passage par création manuelle du dépôt sur github.com par l'utilisateur, puis Git en ligne de commande pour le reste.
 - **2026-09-18** — `git` non trouvé au premier essai dans PowerShell alors qu'il est installé : le PATH de la session n'incluait pas le PATH système/utilisateur à jour. Rafraîchir `$env:PATH` depuis les variables d'environnement Machine/User résout le problème dans la session en cours.
+- **2026-09-18** — `git push -u origin main` échoue avec `terminal prompts disabled` : aucun credential helper Git configuré sur la machine, donc pas d'authentification GitHub stockée, et le terminal non-interactif de l'agent ne peut pas gérer de prompt de login. **Action requise côté utilisateur** : lancer `git push -u origin main` une première fois depuis un terminal interactif normal (hors agent) pour s'authentifier (Git Credential Manager ou Personal Access Token) ; les pushs suivants passeront ensuite sans prompt.
 
 ## Prochaine étape immédiate
 
