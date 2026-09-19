@@ -9,13 +9,19 @@ import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import DemoModal from './components/DemoModal';
 import LegalPage, { getLegalPageKey } from './components/LegalPage';
+import ResourcePage, { getResourcePageKey } from './components/ResourcePage';
 
 export default function App() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
   const legalPageKey = getLegalPageKey(window.location.pathname);
+  const resourcePageKey = getResourcePageKey(window.location.pathname);
 
   if (legalPageKey) {
     return <LegalPage pageKey={legalPageKey} />;
+  }
+
+  if (resourcePageKey) {
+    return <ResourcePage pageKey={resourcePageKey} />;
   }
 
   return (

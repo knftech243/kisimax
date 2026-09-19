@@ -81,6 +81,41 @@ export default function Footer() {
 
         </div>
 
+        {/* Site Pages */}
+        <div className="grid grid-cols-2 gap-8 border-b border-white/10 py-8 sm:grid-cols-3 lg:grid-cols-4">
+          <div>
+            <b className="mb-3 block text-xs font-bold uppercase tracking-wider text-white">Découvrir</b>
+            <div className="flex flex-col gap-2.5">
+              <a href="./a-propos.html" className="hover:text-white transition-colors">À propos</a>
+              <a href="./faq.html" className="hover:text-white transition-colors">Questions fréquentes</a>
+              <a href="./contact.html" className="hover:text-white transition-colors">Contact et assistance</a>
+            </div>
+          </div>
+          <div>
+            <b className="mb-3 block text-xs font-bold uppercase tracking-wider text-white">Confiance</b>
+            <div className="flex flex-col gap-2.5">
+              <a href="./securite.html" className="hover:text-white transition-colors">Sécurité</a>
+              <a href="./politique-confidentialite.html" className="hover:text-white transition-colors">Confidentialité</a>
+              <a href="./politique-cookies.html" className="hover:text-white transition-colors">Cookies</a>
+            </div>
+          </div>
+          <div>
+            <b className="mb-3 block text-xs font-bold uppercase tracking-wider text-white">Contrats</b>
+            <div className="flex flex-col gap-2.5">
+              <a href="./conditions-generales-service.html" className="hover:text-white transition-colors">Conditions générales de service</a>
+              <a href="./remboursement-resiliation.html" className="hover:text-white transition-colors">Remboursement et résiliation</a>
+              <a href="./conditions-utilisation.html" className="hover:text-white transition-colors">Conditions d'utilisation</a>
+            </div>
+          </div>
+          <div>
+            <b className="mb-3 block text-xs font-bold uppercase tracking-wider text-white">Offres</b>
+            <div className="flex flex-col gap-2.5">
+              <a href="./index.html#offres" className="hover:text-white transition-colors">Le Moteur — dès 19 $</a>
+              <a href="./index.html#offres" className="hover:text-white transition-colors">L'Accélérateur — dès 49 $</a>
+            </div>
+          </div>
+        </div>
+
         {/* Legal & Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 text-[11px] text-[#94A3B8]">
           <div className="flex items-center gap-3 flex-wrap justify-center">

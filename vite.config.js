@@ -10,7 +10,14 @@ export default defineConfig({
         main: 'index.html',
         mentionsLegales: 'mentions-legales.html',
         politiqueConfidentialite: 'politique-confidentialite.html',
-        conditionsUtilisation: 'conditions-utilisation.html'
+        conditionsUtilisation: 'conditions-utilisation.html',
+        conditionsGeneralesService: 'conditions-generales-service.html',
+        aPropos: 'a-propos.html',
+        contact: 'contact.html',
+        faq: 'faq.html',
+        securite: 'securite.html',
+        remboursementResiliation: 'remboursement-resiliation.html',
+        politiqueCookies: 'politique-cookies.html'
       }
     }
   },
