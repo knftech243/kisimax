@@ -84,11 +84,11 @@ export default function Footer() {
         {/* Legal & Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 text-[11px] text-[#94A3B8]">
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
+            <a href="./mentions-legales.html" className="hover:text-white transition-colors">Mentions légales</a>
             <span>|</span>
-            <a href="#" className="hover:text-white transition-colors">Conditions d'utilisation</a>
+            <a href="./conditions-utilisation.html" className="hover:text-white transition-colors">Conditions d'utilisation</a>
             <span>|</span>
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
+            <a href="./politique-confidentialite.html" className="hover:text-white transition-colors">Politique de confidentialité</a>
           </div>
           <span>© 2026 Kisimax. Tous droits réservés.</span>
         </div>

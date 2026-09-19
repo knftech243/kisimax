@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Logo({ dark = false, className = '' }) {
+export default function Logo({ dark = false, className = '', href = '#top' }) {
   return (
-    <a href="#top" className={`flex items-center gap-2.5 group transition-transform duration-200 hover:scale-[1.02] ${className}`}>
+    <a href={href} className={`flex items-center gap-2.5 group transition-transform duration-200 hover:scale-[1.02] ${className}`}>
       {/* Kisimax SVG Mark */}
       <svg className="w-[34px] h-[34px] flex-shrink-0" viewBox="0 0 40 40" fill="none">
         <rect x="4" y="3" width="9" height="34" rx="2" fill="#1E9E4A" />

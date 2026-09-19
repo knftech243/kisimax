@@ -8,9 +8,15 @@ import Guarantee from './components/Guarantee';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import DemoModal from './components/DemoModal';
+import LegalPage, { getLegalPageKey } from './components/LegalPage';
 
 export default function App() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const legalPageKey = getLegalPageKey(window.location.pathname);
+
+  if (legalPageKey) {
+    return <LegalPage pageKey={legalPageKey} />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAF8] text-brand-ink selection:bg-brand-green selection:text-white">
