@@ -87,7 +87,7 @@ export default function Pricing({ onSelectPack }) {
               {/* Price */}
               <div className="text-[14px] text-gray-600 mb-5 pt-4 border-t border-gray-100 flex items-baseline">
                 <span>À partir de </span>
-                <span className="text-[32px] font-black text-brand-ink mx-1.5 leading-none">49$</span>
+                <span className="text-[32px] font-black text-brand-ink mx-1.5 leading-none">19$</span>
                 <span>/ mois</span>
               </div>
 
@@ -163,7 +163,7 @@ export default function Pricing({ onSelectPack }) {
               {/* Price */}
               <div className="text-[14px] text-gray-600 mb-5 pt-4 border-t border-gray-100 flex items-baseline">
                 <span>À partir de </span>
-                <span className="text-[32px] font-black text-brand-ink mx-1.5 leading-none">79$</span>
+                <span className="text-[32px] font-black text-brand-ink mx-1.5 leading-none">49$</span>
                 <span>/ mois</span>
               </div>
 
