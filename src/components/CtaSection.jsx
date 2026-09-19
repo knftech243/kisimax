@@ -30,7 +30,7 @@ export default function CtaSection() {
         {/* White Primary Button */}
         <div className="flex justify-center">
           <a
-            href="https://wa.me/243971234567?text=Bonjour%20Kisimax,%20je%20souhaite%20r%C3%A9server%20mon%20appel%20de%20d%C3%A9couverte%20gratuit."
+            href="https://wa.me/243893187299?text=Bonjour%20Kisimax,%20je%20souhaite%20r%C3%A9server%20mon%20appel%20de%20d%C3%A9couverte%20gratuit."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-brand-ink text-[16px] font-extrabold px-8 py-3.5 rounded-lg transition-colors border border-white"

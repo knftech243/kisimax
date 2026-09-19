@@ -167,7 +167,7 @@ export default function DemoModal({ isOpen, onClose }) {
             Installation clé en main et formation incluse en moins de 48h.
           </div>
           <a
-            href="https://wa.me/243971234567?text=Bonjour%20Kisimax,%20je%20viens%20de%20voir%20la%20d%C3%A9mo%20et%20je%20veux%20structurer%20ma%20boutique."
+            href="https://wa.me/243893187299?text=Bonjour%20Kisimax,%20je%20viens%20de%20voir%20la%20d%C3%A9mo%20et%20je%20veux%20structurer%20ma%20boutique."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold text-sm px-6 py-3 rounded-lg border border-brand-greenDark transition-colors"

@@ -93,7 +93,7 @@ export default function Pricing({ onSelectPack }) {
 
               {/* Action Button */}
               <a
-                href="https://wa.me/243971234567?text=Bonjour%20Kisimax,%20je%20souhaite%20configurer%20le%20Pack%201%20Le%20Moteur%20pour%20ma%20boutique."
+                href="https://wa.me/243893187299?text=Bonjour%20Kisimax,%20je%20souhaite%20configurer%20le%20Pack%201%20Le%20Moteur%20pour%20ma%20boutique."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold py-3.5 px-6 rounded-lg transition-colors border border-brand-greenDark"
@@ -169,7 +169,7 @@ export default function Pricing({ onSelectPack }) {
 
               {/* Action Button */}
               <a
-                href="https://wa.me/243971234567?text=Bonjour%20Kisimax,%20je%20souhaite%20passer%20au%20niveau%20supérieur%20avec%20le%20Pack%202%20L'Accélérateur."
+                href="https://wa.me/243893187299?text=Bonjour%20Kisimax,%20je%20souhaite%20passer%20au%20niveau%20supérieur%20avec%20le%20Pack%202%20L'Accélérateur."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-brand-night hover:bg-brand-nightLight text-white font-bold py-3.5 px-6 rounded-lg transition-colors"

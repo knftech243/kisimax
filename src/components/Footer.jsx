@@ -18,7 +18,7 @@ export default function Footer() {
           {/* WhatsApp Direct Contact */}
           <div className="lg:col-span-3">
             <a 
-              href="https://wa.me/243971234567" 
+              href="https://wa.me/243893187299"
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-3 group hover:text-white transition-colors"
@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div>
                 <b className="text-white text-sm font-bold block group-hover:text-brand-green transition-colors">
-                  +243 97 123 4567
+                  +243 89 318 7299
                 </b>
                 <span className="text-[11px] text-[#8FA0B2]">Contact WhatsApp</span>
               </div>
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Email Contact */}
           <div className="lg:col-span-3">
             <a 
-              href="mailto:contact@kisimax.com"
+              href="mailto:contact@kisimax.tech"
               className="flex items-center gap-3 group hover:text-white transition-colors"
             >
               <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-all">
@@ -49,7 +49,7 @@ export default function Footer() {
               </div>
               <div>
                 <b className="text-white text-sm font-bold block group-hover:text-brand-green transition-colors">
-                  contact@kisimax.com
+                  contact@kisimax.tech
                 </b>
                 <span className="text-[11px] text-[#8FA0B2]">Envoyez-nous un email</span>
               </div>

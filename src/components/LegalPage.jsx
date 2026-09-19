@@ -67,9 +67,8 @@ function MissingInformationNotice() {
       <div>
         <p className="font-bold">Informations administratives à compléter avant la mise en production</p>
         <p className="mt-1 text-sm leading-6 text-amber-900/80">
-          La forme juridique, le RCCM, l'identification nationale, le NIF, l'adresse du siège, le nom du
-          responsable de publication et l'hébergeur n'étaient pas disponibles dans le projet. Ils doivent être
-          renseignés et validés par le responsable de Kisimax.
+          La forme juridique, le RCCM, l'identification nationale, le NIF et l'adresse du siège n'étaient pas
+          disponibles dans le projet. Ils doivent être renseignés et validés par le responsable de Kisimax.
         </p>
       </div>
     </div>
@@ -89,9 +88,9 @@ const mentionsSections = [
           <p><strong className="text-brand-ink">RCCM :</strong> À renseigner</p>
           <p><strong className="text-brand-ink">ID Nat. / NIF :</strong> À renseigner</p>
           <p><strong className="text-brand-ink">Siège social :</strong> À renseigner</p>
-          <p><strong className="text-brand-ink">Responsable de publication :</strong> À renseigner</p>
-          <p><strong className="text-brand-ink">Téléphone :</strong> +243 97 123 4567</p>
-          <p><strong className="text-brand-ink">E-mail :</strong> contact@kisimax.com</p>
+          <p><strong className="text-brand-ink">Responsable de publication :</strong> KISIMA NUMBI Franck, CEO de KNFtech</p>
+          <p><strong className="text-brand-ink">Téléphone :</strong> +243 89 318 7299</p>
+          <p><strong className="text-brand-ink">E-mail :</strong> contact@kisimax.tech</p>
         </div>
         <MissingInformationNotice />
       </>
@@ -102,12 +101,9 @@ const mentionsSections = [
     title: '2. Hébergement',
     content: (
       <>
-        <Paragraph>
-          Le nom, la raison sociale et l'adresse de l'hébergeur doivent être ajoutés dès que le choix de
-          l'infrastructure de production est arrêté.
-        </Paragraph>
+        <Paragraph>Le site Kisimax est hébergé par Hostinger.</Paragraph>
         <p className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
-          Hébergeur : À renseigner avant publication.
+          Hébergeur : Hostinger — <a className="text-brand-green underline underline-offset-4" href="https://www.hostinger.com" target="_blank" rel="noopener noreferrer">www.hostinger.com</a>
         </p>
       </>
     ),
@@ -158,7 +154,7 @@ const mentionsSections = [
       <>
         <Paragraph>
           Le site est soumis au droit de la République démocratique du Congo, notamment aux dispositions applicables
-          du Code du numérique. Pour toute question : <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.com">contact@kisimax.com</a>.
+          du Code du numérique. Pour toute question : <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.tech">contact@kisimax.tech</a>.
         </Paragraph>
       </>
     ),
@@ -176,7 +172,7 @@ const privacySections = [
           administratives complètes de l'entité doivent être ajoutées aux mentions légales avant le lancement public.
         </Paragraph>
         <Paragraph>
-          Pour toute question ou demande relative à vos données : <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.com">contact@kisimax.com</a>.
+          Pour toute question ou demande relative à vos données : <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.tech">contact@kisimax.tech</a>.
         </Paragraph>
       </>
     ),
@@ -246,7 +242,7 @@ const privacySections = [
           l'avenir. Une vérification raisonnable de votre identité peut être demandée afin de protéger vos données.
         </Paragraph>
         <Paragraph>
-          Adressez votre demande à <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.com">contact@kisimax.com</a>. Vous pouvez également saisir l'autorité congolaise compétente en matière de protection des données.
+          Adressez votre demande à <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.tech">contact@kisimax.tech</a>. Vous pouvez également saisir l'autorité congolaise compétente en matière de protection des données.
         </Paragraph>
       </>
     ),
@@ -395,7 +391,7 @@ const termsSections = [
     title: '10. Contact et modification',
     content: (
       <Paragraph>
-        Toute question peut être adressée à <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.com">contact@kisimax.com</a>. Kisimax peut modifier ces conditions pour tenir compte de l'évolution du service ou de la loi. La date de mise à jour figure en haut de cette page.
+        Toute question peut être adressée à <a className="font-semibold text-brand-green underline underline-offset-4" href="mailto:contact@kisimax.tech">contact@kisimax.tech</a>. Kisimax peut modifier ces conditions pour tenir compte de l'évolution du service ou de la loi. La date de mise à jour figure en haut de cette page.
       </Paragraph>
     ),
   },
